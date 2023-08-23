@@ -5,6 +5,7 @@ import sys
 import whois
 import requests
 import re
+import nmap
 from datetime import datetime
 from colorama import init, Fore, Style
 
@@ -112,6 +113,15 @@ def whois_lookup(target):
     except Exception as e:
         return Fore.RED + f"Whois lookup error: {e}"
 
+def vulnerability_scan(target):
+    try:
+        nm = nmap.PortScanner()
+        nm.scan(target, arguments="-Pn -p- -T4")
+        return nm.csv()
+    except nmap.PortScannerError as e:
+        return f"Vulnerability scanning failed: {e}"
+    except Exception as e:
+        return f"An error occurred: {e}"
 
 def main():
     intro = r"""
@@ -149,7 +159,8 @@ def main():
         print("8. Banner Grabbing")
         print("9. TCP Traceroute")
         print("10. HTTP Header Analysis")
-        print("11. Return to main menu")
+        print("11. Vulnerability Scan")
+        print("12. Return to main menu")
 
         choice = input(Fore.YELLOW + "Enter your choice: ")
 
@@ -194,6 +205,11 @@ def main():
             for key, value in headers.items():
                 print(f"{key}: {value}")
         elif choice == "11":
+            print(Fore.YELLOW + "Performing Vulnerability Scan...")
+            vulnerability_result = vulnerability_scan(target)
+            print(Fore.GREEN + "Vulnerability Scan Results:")
+            print(vulnerability_result)
+        elif choice == "12":
             print(Fore.YELLOW + "Returning to main menu...")
         else:
             print(Fore.RED + "Invalid choice. Please select a valid option.")
@@ -201,3 +217,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
+
+
