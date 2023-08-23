@@ -15,15 +15,20 @@ Welcome to NV Pert IP Multi Tool! This tool provides a variety of network-relate
 - TCP Traceroute
 - HTTP Header Analysis
 - IP Locator
+- Vulnerability Scan (*requires `nmap` tool*)
 
 ## Installation
 
 1. Clone this repository to your local machine.
 2. Navigate to the repository directory.
-3. Install the required packages using the following command: pip install -r requirements.txt
+3. Install the required Python packages using the following command: `pip install -r requirements.txt`
+4. Install `nmap` on your system to enable the Vulnerability Scan feature. You can download it from [https://nmap.org/download.html](https://nmap.org/download.html) and follow the installation instructions for your operating system.
 
+## Usage
 
-2. Follow the on-screen prompts to choose and execute different network functionalities.
+1. Run the script.
+2. Follow the on-screen prompts to choose and execute different network functionalities, including Vulnerability Scan.
+3. For the Vulnerability Scan, make sure `nmap` is installed, and the tool will use it to perform the scan.
 
 ## Example
 
@@ -45,6 +50,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ---
 
 Enjoy using NV Pert IP Multi Tool for your network analysis needs!
-
-
-   
