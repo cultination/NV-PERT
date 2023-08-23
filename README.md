@@ -22,7 +22,7 @@ Welcome to NV Pert IP Multi Tool! This tool provides a variety of network-relate
 1. Clone this repository to your local machine.
 2. Navigate to the repository directory.
 3. Install the required Python packages using the following command: `pip install -r requirements.txt`
-4. Install `nmap` on your system to enable the Vulnerability Scan feature. You can download it from [https://nmap.org/download.html](https://nmap.org/download.html) and follow the installation instructions for your operating system.
+4. Install `nmap` on your system as path to enable the Vulnerability Scan feature. You can download it from [https://nmap.org/download.html](https://nmap.org/download.html) and follow the installation instructions for your operating system.
 
 ## Usage
 
