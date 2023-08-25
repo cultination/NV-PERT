@@ -14,7 +14,6 @@ Welcome to NV Pert IP Multi Tool! This tool provides a variety of network-relate
 - Banner Grabbing
 - TCP Traceroute
 - HTTP Header Analysis
-- IP Locator
 - Vulnerability Scan (*requires `nmap` tool*)
 
 ## Installation
